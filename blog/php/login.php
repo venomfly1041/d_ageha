@@ -3,7 +3,6 @@
 </head>
 <body>
 <form action="login.php" method="post">
-fuckingum palace
 username:<input type="text" name="username"></br>
 password:<input type="password" name="pass"></br>
 confirm password:<input type="password" name="re_pass"></br>
