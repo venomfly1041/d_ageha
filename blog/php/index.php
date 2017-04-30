@@ -1,23 +1,16 @@
 <?php
 
-require("header.php");
+require("linkbay.php");
+$reader=new linkbay();
 
-$dbh=new PDO('mysql:host=localhost;dbname=blog','user','');
-$alldata=$dbh->query("select * from article order by date desc");
-$data=$alldata->fetchAll();
 ?>
 
 <html>
-<?php header(); ?>
+<?php include("header.php"); ?>
 
 <body>
 test page
-<?php
-foreach($data as $line){
-	$url="./article/".$line[id].".html";
-}
-?>
-
+<?php $reader->output(); ?>
 </body>
 </html>
 

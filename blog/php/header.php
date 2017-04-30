@@ -1,7 +1,3 @@
-<?php
-require_once("favicon.php");
-?>
-
 <head>
-<?php favicon(); ?>
+<?php include("favicon.php"); ?>
 </head>
