@@ -1,3 +1,11 @@
+
+function authorize(){
+  if(!empty($_REQUEST[day]))
+    return false;
+}
+
+function forms(){
+echo <<< EOT
 <html>
 <head>
 </head>
@@ -11,3 +19,5 @@ confirm password:<input type="password" name="re_pass"></br>
 </form>
 </body>
 </html>
+EOT;
+}
