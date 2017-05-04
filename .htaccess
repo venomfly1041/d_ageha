@@ -1,1 +1,13 @@
+DirectoryIndex index.php
 AddHandler imap-file .ico
+Options FollowSymLinks
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{THE_REQUEST} /cgi-bin/d_ageha/blog
+RewriteRule ^(.*)\/$ /cgi-bin/d_ageha/$1\/index.php
+
+#comment out below line to force  using ssl.
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://{HTTP_HOST}%{REQUEST_URI} [R,L] 
+</IfModule>

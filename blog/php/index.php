@@ -1,8 +1,8 @@
 <?php
-
 require("linkbay.php");
+require("config.php");
 $reader=new linkbay();
-
+$cfg=new config();
 ?>
 
 <html>
@@ -11,6 +11,7 @@ $reader=new linkbay();
 <body>
 test page
 <?php $reader->output(); ?>
+
 </body>
 </html>
 
