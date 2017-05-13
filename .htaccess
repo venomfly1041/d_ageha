@@ -3,7 +3,11 @@ Options FollowSymLinks
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule blog/.* blog/php/index\.php
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule blog/.* blog/php/index\.php [L]
 
 #comment out below line to force  use of ssl.
 #RewriteCond %{HTTPS} off

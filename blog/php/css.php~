@@ -1,9 +1,0 @@
-<?php
-
-include("config.php");
-$cfg=new config();
-
-echo $cfg->pc_css;
-
-
-?>

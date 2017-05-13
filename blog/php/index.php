@@ -1,17 +1,13 @@
 <?php
-require("linkbay.php");
-require("config.php");
+require_once("db_reader.php");
 $reader=new linkbay();
-$cfg=new config();
 ?>
 
 <html>
 <?php include("header.php"); ?>
 
 <body>
-test page
 <?php $reader->output(); ?>
-
 </body>
 </html>
 
